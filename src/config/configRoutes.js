@@ -1,10 +1,10 @@
-// TODO import routes
 
 const { homeRouter } = require("../controllers/homeController");
+const userController = require("../controllers/userController");
 
 function configRoutes(app) {
     app.use(homeRouter)
-    // TODO register routers
+    app.use(userController);
 }
 
 module.exports = { configRoutes };

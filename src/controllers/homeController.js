@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { login } = require("../services/userService");
+const { login } = require("../services/userServices");
 const { createToken } = require("../services/jwt");
 
 // TODO replace with real router according to your app structure

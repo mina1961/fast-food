@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 //TODO set identity prop name based on exam description
 const identityPropName = 'email';
 
-async function register(identity, password) {
+async function register(name, identity, password) {
     const existingUser = await User.findOne({ [identityPropName]: identity });
 
     if (existingUser) {
@@ -12,9 +12,10 @@ async function register(identity, password) {
     }
 
     const user = new User({
+        name,
         [identityPropName]: identity,
         password: await bcrypt.hash(password, 10)
-    })
+    });
 
     await user.save();
 

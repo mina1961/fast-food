@@ -3,6 +3,10 @@ const { Schema, model } = require('mongoose');
 // TODO replace with actual user model
 
 const userSchema = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
     email: {
         type: String,
         required: true,

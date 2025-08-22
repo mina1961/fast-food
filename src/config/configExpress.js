@@ -7,6 +7,7 @@ function configExpress(app) {
     app.use(session());
 
     app.use('/static', express.static('static'));
+   
     app.use(express.urlencoded({ extended: true }));
 }
 

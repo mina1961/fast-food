@@ -1,10 +1,10 @@
 
 const { homeRouter } = require("../controllers/homeController");
-const userController = require("../controllers/userController");
+const { userRouter } = require("../controllers/userController");
 
 function configRoutes(app) {
     app.use(homeRouter)
-    app.use(userController);
+    app.use(userRouter);
 }
 
 module.exports = { configRoutes };

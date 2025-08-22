@@ -1,3 +1,20 @@
+/* Разстояние между таб бутоните (бургер и пица) */
+.tabs {
+    display: flex;
+    gap: 20rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Големи таб икони за meals страница */
+.tab-icon-btn i {
+    font-size: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .meals-title {
     font-size: 8rem;
     font-weight: 900;
@@ -84,7 +101,7 @@ footer {
 #main-icon {
     position: static !important;
     transform: none !important;
-    font-size: 15rem !important;
+    font-size: 30rem !important;
     color: #2da75c !important;
     display: inline-block !important;
 }

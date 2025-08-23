@@ -1,3 +1,4 @@
+const dataService = require('../services/dataService');
 
 const { Router } = require("express");
 const { Food } = require('../models/Food');
@@ -21,7 +22,12 @@ homeRouter.get('/', async (req, res) => {
         'fa-stroopwafel',
         'fa-egg'
     ];
-    res.render('home', { icons });
+    try {
+        const foods = await dataService.getAllData();
+        res.render('home', { icons, foods, user: req.user });
+    } catch (err) {
+        res.status(500).send('Error loading foods');
+    }
 });
 
 homeRouter.get('/meals', (req, res) => {

@@ -17,7 +17,7 @@ async function create(data, authorId) {
         price: data.price,
         imageUrl: data.imageUrl,
         available: data.available !== undefined ? data.available : true,
-        author: authorId
+        author: data.author ||authorId
     });
     await record.save();
     return record;

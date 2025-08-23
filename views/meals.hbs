@@ -1,12 +1,25 @@
-<div class="section-2">
-    <h1 class="section-heading meals-title">popular meals</h1>
-    <div class="tabs">
-        <button class="tab-btn active tab-icon-btn" data-tab="burgers">
-            <i class="fas fa-hamburger"></i>
-        </button>
-        <button class="tab-btn tab-icon-btn" data-tab="pizzas">
-            <i class="fas fa-pizza-slice"></i>
-        </button>
-    </div>
+<div class="container">
+    <div class="section-2">
+        <h1 class="section-heading">popular meals</h1>
 
+        <div class="cards-container tabs">
+            <a href="/meals/burgers" class="tab-btn tab-icon-btn{{#if (eq category 'burger')}} active{{/if}}">
+                <i class="fas fa-hamburger"></i>
+            </a>
+            <a href="/meals/pizzas" class="tab-btn tab-icon-btn{{#if (eq category 'pizza')}} active{{/if}}">
+                <i class="fas fa-pizza-slice"></i>
+            </a>
+        </div>
+
+        <div class="cards-container">
+            {{#each foods}}
+            <div class="card">
+                <img src="{{this.imageUrl}}" class="card-img">
+                <h3 class="card-name">{{this.name}}</h3>
+                <p class="card-description">{{this.description}}</p>
+                <span class="card-price">{{this.price}} лв.</span>
+            </div>
+            {{/each}}
+        </div>
+    </div>
 </div>

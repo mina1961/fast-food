@@ -10,58 +10,17 @@
     </section>
     <!-- end of section 1 -->
     <!-- section 3 -->
-        <section class="section-3">
-            <h1 class="section-heading">gallery</h1>
-            <div class="gallery">
-
-                <a href="#" class="gallery-link" title="Order Now">
-                    <img src="../static/images/bacon-burger.png" class="food-img">
-                    <h3 class="food-name">Bacon Burger</h3>
-                    <p class="food-desceiption">Your favourite Whopper topped with cheese, pickles, iceberg lettuce, white onions, tomatoes and streaky Bacon along with BBQ Sauce and mayonnaise.</p>
-                </a>
-
-                <a href="#" class="gallery-link" title="Order Now">
-                    <img src="../static/images/vegan-burger.png" class="food-img">
-                    <h3 class="food-name">Vegan Burger</h3>
-                    <p class="food-desceiption">Burger veggies include ingredients for the patty, such as potatoes, carrots, beans, mushrooms, and grains, along with toppings like lettuce, tomato, onions, avocado, and sprouts. </p>
-                </a>
-
-                <a href="#" class="gallery-link" title="Order Now">
-                    <img src="../static/images/cheeseburger.png" class="food-img">
-                    <h3 class="food-name">Cheeseburger</h3>
-                    <p class="food-desceiption">When making cheeseburgers, the cheese is pre-sliced ​​and added at the end of baking. Different types of cheese are used, such as mozzarella, gorgonzola, or cheddar.</p>
-                </a>
-
-                <a href="#" class="gallery-link" title="Order Now">
-                    <img src="../static/images/double-burger.png" class="food-img">
-                    <h3 class="food-name">Double Burger</h3>
-                    <p class="food-desceiption">Two flame grilled 100% beef patties with double melted American cheese, crunchy pickles, ketchup and mustard all on a warm, toasted, sesame seed bun.</p>
-                </a>
-
-                <a href="#" class="gallery-link" title="Order Now">
-                    <img src="../static/images/pizza-capriccioza.png" class="food-img">
-                    <h3 class="food-name">Pizza Capricciosa</h3>
-                    <p class="food-desceiption">Pizza capricciosa is a style of pizza in Italian cuisine prepared with mozzarella cheese, prosciutto, mushrooms (usually champignons), green and black olives, artichokes, and tomatoes. A variant includes anchovies.</p>
-                </a>
-
-                <a href="#" class="gallery-link" title="Order Now">
-                    <img src="../static/images/quattro-formaggi-pizza.png" class="food-img">
-                    <h3 class="food-name">Quattro Formaggi Pizza</h3>
-                    <p class="food-desceiption">Pizza quattro formaggi, also known as pizza ai quattro formaggi, is a style of pizza in Italian cuisine that is topped with a combination of four types of cheese, usually melted together, with or without mato sauce. It is popular worldwide, including in Italy, and is one of the iconic items from pizzerias' menus.</p>
-                </a>
-
-                <a href="#" class="gallery-link" title="Order Now">
-                    <img src="../static/images/pizza-margherita.png" class="food-img">
-                    <h3 class="food-name">Pizza Margharita</h3>
-                    <p class="food-desceiption">The ingredients of traditional pizza Margherita—tomatoes , mozzarella, and basil — are held by popular legend to be inspired by the colors of the national flag of Italy.</p>
-                </a>
-
-                <a href="#" class="gallery-link" title="Order Now">
-                    <img src="../static/images/pizza-de-pepperoni.png" class="food-img">
-                    <h3 class="food-name">Pizza de Pepperoni</h3>
-                    <p class="food-desceiption">Pepperoni pizza is a classic and popular American pizza, whose main flavor comes from pepperoni - a type of dry, thinly sliced ​​pork and beef salami seasoned with red pepper. It usually also includes tomato sauce and mozzarella cheese, and in some recipes other ingredients such as chili or chorizo ​​are added to enrich the flavor.</p>
-                </a>
-            </div>
-        </section>
-        <!-- end of section 3 -->
+    <section class="section-3">
+        <h1 class="section-heading">gallery</h1>
+        <div class="gallery">
+            {{#each foods}}
+            <a href="#" class="gallery-link" title="Order Now">
+                <img src="{{this.imageUrl}}" class="food-img">
+                <h3 class="food-name">{{this.name}}</h3>
+                <p class="food-desceiption">{{this.description}}</p>
+            </a>
+            {{/each}}
+        </div>
+    </section>
+    <!-- end of section 3 -->
 </div>

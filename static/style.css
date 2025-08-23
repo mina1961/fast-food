@@ -265,14 +265,19 @@ html {
     padding: 10rem 0;
 }
 
+
+/* За meals страницата: една колона, по-широки карти */
 .cards-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10rem;
+    gap: 4rem;
 }
 
+
 .card {
-    width: 20rem;
+    width: 40rem;
     background-color: #2da75c;
     padding: 4rem;
     display: flex;
